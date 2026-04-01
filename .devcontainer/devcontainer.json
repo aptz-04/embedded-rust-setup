@@ -1,0 +1,17 @@
+{
+    "image": "cleanlex/embrust:1",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "llvm-vs-code-extensions.vscode-clangd",
+                "rust-lang.rust-analyzer",
+                "mhutchie.git-graph"
+            ]           
+        }
+    },
+    "runArgs": [
+        "--privileged",
+        "--device=/dev/pico-probe",
+        "--volume=/dev/pico-probe:/dev/pico-probe"
+    ]
+}
