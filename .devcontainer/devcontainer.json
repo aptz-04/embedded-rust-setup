@@ -10,8 +10,6 @@
         }
     },
     "runArgs": [
-        "--privileged",
-        "--device=/dev/pico-probe",
-        "--volume=/dev/pico-probe:/dev/pico-probe"
+        "--device=/dev/bus/usb"
     ]
 }

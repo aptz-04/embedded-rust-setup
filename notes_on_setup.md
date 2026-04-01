@@ -12,4 +12,10 @@ The permissions on the pico probe need to be set right to enable the container t
 ```bash
 sudo udevadm control --reload && sudo udeadm trigger
 ```
-to make sure the rules are enforced. The container might need a restart to see the probe, on your **local** machine run ```docker ps``` to list docker containers running and run ```docker restart <container_name>``` to restart it.
+to make sure the rules are enforced. 
+
+If the probe was connected after the container was started needs a restart to see the probe(check using ```docker -a``` on local machine). On your **local** machine, run ```docker restart <container_name>``` to restart it.
+
+## Embassy integration
+
+Copy the ```Cargo.toml```, the ```memory.x``` and the ```build.rs``` from the example directory and remove unneeded stuff from the ```.toml``` file. Make a main.rs file under the ```src``` directory or a differently named file in the ```src/bin``` directory (build/run with ```--bin <filename without extension>```). Copy the ```.cargo``` directory to the project directory.
